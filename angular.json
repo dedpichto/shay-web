@@ -32,7 +32,12 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "bundleName": "dark-theme",
+                "inject": false,
+                "input": "src/styles/themes/dark.scss"
+              }
             ],
             "scripts": []
           },
@@ -98,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
