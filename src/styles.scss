@@ -16,16 +16,44 @@
 
 // @include components.theme(themes.$my-app-light-theme);
 
+:root {
+  --text-color-light: #000000;
+  --text-color-dark: #ffffff;
+}
+
+[data-theme="light"] {
+  --text-color: var(--text-color-light);
+}
+
+[data-theme="dark"] {
+  --text-color: var(--text-color-dark);
+}
+
 html,
 body {
   height: 100%;
+  color: var(--text-color);
 }
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
 
+// ::ng-deep body {
+//   color: var(--text-color) !important;
+// }
+
+// ::ng-deep table, ::ng-deep th, ::ng-deep td, ::ng-deep .mat-cell, ::ng-deep .mat-header-cell {
+//   color: var(--text-color) !important;
+// }
+
+// ::ng-deep .mat-cell, ::ng-deep .mat-header-cell, ::ng-deep .mat-cell * ,::ng-deep .mat-header-cell * {
+//   color: var(--text-color) !important;
+// }
+
 .button-rounded {
+
   &.mat-mdc-button,
   &.mat-mdc-raised-button,
   &.mdc-button--unelevated,
